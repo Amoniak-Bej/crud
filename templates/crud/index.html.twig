@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="coll-md-3 offset-md-3">
+        {% for item in records%}
+            <div class="form-group">
+                <p class="w-50 p-3">
+                    <span>{{ item.id }}.</span>   <span>{{ item.header }}</span>
+                    <button onclick="location.href='http://localhost:8000/crud/show/{{ item.id }}'" class="btn btn-info mt-2 text-white bg-dark border-dark">Show</button>
+                    <button onclick="location.href='http://localhost:8000/crud/edit/{{ item.id }}'" class="btn btn-info mt-2 text-white bg-dark border-dark">Edit</button>
+                    <button onclick="location.href='http://localhost:8000/crud/delete/{{ item.id }}'" class="btn btn-info mt-2 text-white bg-dark border-dark">Remove</button>
+                </p>
+            </div>
+        {% endfor %}
+        <button onclick="location.href='http://localhost:8000/crud/create'" class="btn btn-info mt-2 text-white bg-dark border-dark">Create new</button>
+    </div>
+
+{% endblock %}

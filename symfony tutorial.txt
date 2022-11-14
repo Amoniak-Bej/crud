@@ -1,0 +1,7 @@
+composer create-project symfony/skeleton:"6.1.*" C:\Users\Komp\Desktop\projekt
+cd C:\Users\Komp\Desktop\projekt
+composer require webapp
+symfony server:start
+http://localhost:8000/
+
+symfony console doctrine:database:create 
